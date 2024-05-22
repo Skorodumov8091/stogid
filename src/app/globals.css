@@ -4,30 +4,71 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background-start-rgb: 8, 145, 178;
+  --background-end-rgb: 8, 145, 178;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(14, 116, 144);  
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.slick-slider .slick-prev:before,
+.slick-slider .slick-next:before {
+  color: rgb(14 116 144 / var(--tw-bg-opacity));
+  font-size: 24px;
+}
+.slick-slider .slick-prev {
+  left: auto;
+  right: 42.5px;
+  top: -25px;
+}
+.slick-slider .slick-next {
+  right: 12.5px;
+  top: -25px;
+}
+
+.catalog-item {
+  width: calc(50% - 5px);
+}
+.competitors-slider .catalog-item {
+  width: calc(100% - 10px);
+}
+.directory-item {
+  min-height: calc(100vh - 72px);
+  height: calc(100vh - 72px);
+  scrollbar-color: rgb(229 231 235 / var(--tw-border-opacity)) transparent;
+  scrollbar-width: thin;
+}
+
+.directory-cart-item {
+  min-height: calc(100vh - 128px);
+  height: calc(100vh - 128px);
+  scrollbar-color: rgb(229 231 235 / var(--tw-border-opacity)) transparent;
+  scrollbar-width: thin;
+  margin-bottom: 56px;
+}
+
+@media screen and (min-width: 768px) {
+  .directory-cart-item {
+    min-height: calc(100vh - 72px);
+    height: calc(100vh - 72px);
+    margin-bottom: 0px;
+  }
+}
+
+.active {
+  background: rgb(14 116 144 / var(--tw-bg-opacity));
+  border-color: rgb(14 116 144 / var(--tw-bg-opacity));
+  color: #ffffff;
+  font-weight: 600;
+}
+.filter-item {
+  width: calc(33%);
 }
