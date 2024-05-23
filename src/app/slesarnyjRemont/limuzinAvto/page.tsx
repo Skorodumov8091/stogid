@@ -26,6 +26,13 @@ export default function LimuzinAvto() {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+       slidesToShow: 1,
+      }
+    }],
   };
 
   return (
