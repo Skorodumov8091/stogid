@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "СТОГИД - Категории",
@@ -8,11 +9,45 @@ export const metadata: Metadata = {
 export default function Category() {
     return (
       <main className="flexh-full flex-col items-center justify-between bg-white text-black">
-          <div className="container max-w-screen-lg mx-auto">
-            <div className="directory-item w-full px-4 flex flex-col gap-4 justify-center">
-              <h1 className="text-2xl font-semibold text-center">Категории</h1>
+        <div className="container max-w-screen-lg mx-auto">
+          <div className="h-min100-page w-full px-4 py-10 flex flex-col gap-x-4 gap-y-6">
+            <h1 className="text-2xl font-semibold text-center">Категории</h1>
+            <form className="flex">
+              <div className="relative w-full">
+                <input type="search" id="search-dropdown" className="border-fix block p-2.5 w-full z-20 text-sm rounded-e-lg border border-solid border-gray-50" placeholder="Поиск" required />
+                <button type="submit" className="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-red-700 rounded-e-lg border border-red-700">
+                  <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                  </svg>
+                  <span className="sr-only">Поиск</span>
+                </button>
+              </div>
+            </form>
+            <div className="flex gap-y-2 flex-wrap">
+                <Link className="w-full sm:w-2/4 sm:pl-2.5" href="#">Категория 1</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 2</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 3</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 4</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 5</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 6</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 7</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 8</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 9</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 10</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 11</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 12</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 13</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 14</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 15</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 16</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 17</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 18</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 19</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 20</Link>
+                <Link className="w-full sm:w-2/4 sm:pl-2.5"  href="#">Категория 21</Link>
             </div>
           </div>
+        </div>
       </main>
     );
   }

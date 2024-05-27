@@ -38,7 +38,7 @@ export default function Header() {
                     </a>
                     <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={customStyles}>
                         <h1 className="text-2xl font-semibold text-center">Выбор города</h1>
-                        {/* <button onClick={() => setIsOpen(false)}>Close Modal</button> */}
+                        
                     </Modal>
                 </div>
                 <Link href="/add" className="hidden flex justify-between items-center gap-1 p-1.5 border-solid border-2 border-sky-50 rounded-md sm:flex">

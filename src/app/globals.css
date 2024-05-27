@@ -19,6 +19,12 @@ body {
   }
 }
 
+.border-fix {
+  border: 1px solid;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
 .slick-slider .slick-prev:before,
 .slick-slider .slick-next:before {
   color: rgb(14 116 144 / var(--tw-bg-opacity));
@@ -35,18 +41,28 @@ body {
 }
 
 .catalog-item {
-  width: calc(50% - 5px);
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .catalog-item {
+    width: calc(50% - 5px);
+  }
 }
 .competitors-slider .catalog-item {
   width: calc(100% - 10px);
 }
+
+.h-min100-page {
+  min-height: calc(100vh - 72px);
+  height: 100%;
+}
+
 .directory-item {
   min-height: calc(100vh - 72px);
   height: calc(100vh - 72px);
   scrollbar-color: rgb(229 231 235 / var(--tw-border-opacity)) transparent;
   scrollbar-width: thin;
 }
-
 .directory-cart-item {
   min-height: calc(100vh - 128px);
   height: calc(100vh - 128px);

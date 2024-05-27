@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "СТОГИД - Города",
@@ -8,11 +9,59 @@ export const metadata: Metadata = {
 export default function Cities() {
     return (
       <main className="flexh-full flex-col items-center justify-between bg-white text-black">
-          <div className="container max-w-screen-lg mx-auto">
-            <div className="directory-item w-full px-4 flex flex-col gap-4 justify-center">
-              <h1 className="text-2xl font-semibold text-center">Города</h1>
+        <div className="container max-w-screen-lg mx-auto">
+          <div className="h-min100-page w-full px-4 py-10 flex flex-col gap-x-4 gap-y-6">
+            <h1 className="text-2xl font-semibold text-center">Города и области</h1>
+            <div className="flex gap-y-4 flex-wrap">
+              <div className="flex flex-col gap-2 w-full sm:w-2/4 sm:pl-2.5 lg:w-1/3">
+                <Link className="font-semibold text-cyan-700" href="#">Область 1</Link>
+                <Link href="#">Город 1</Link>
+                <Link href="#">Город 2</Link>
+                <Link href="#">Город 3</Link>
+                <Link href="#">Город 4</Link>
+                <Link href="#">Город 5</Link>
+              </div>
+              <div className="flex flex-col gap-3 w-full sm:w-2/4 sm:pl-2.5 lg:w-1/3">
+                <Link className="font-semibold text-cyan-700" href="#">Область 2</Link>
+                <Link href="#">Город 1</Link>
+                <Link href="#">Город 2</Link>
+                <Link href="#">Город 3</Link>
+              </div>
+              <div className="flex flex-col gap-3 w-full sm:w-2/4 sm:pl-2.5 lg:w-1/3">
+                <Link className="font-semibold text-cyan-700" href="#">Область 3</Link>
+                <Link href="#">Город 1</Link>
+                <Link href="#">Город 2</Link>
+                <Link href="#">Город 3</Link>
+                <Link href="#">Город 4</Link>
+                <Link href="#">Город 5</Link>
+                <Link href="#">Город 6</Link>
+                <Link href="#">Город 7</Link>
+                <Link href="#">Город 8</Link>
+              </div>
+              <div className="flex flex-col gap-3 w-full sm:w-2/4 sm:pl-2.5 lg:w-1/3">
+                <Link className="font-semibold text-cyan-700" href="#">Область 4</Link>
+                <Link href="#">Город 1</Link>
+                <Link href="#">Город 2</Link>
+                <Link href="#">Город 3</Link>
+                <Link href="#">Город 4</Link>
+              </div>
+              <div className="flex flex-col gap-3 w-full sm:w-2/4 sm:pl-2.5 lg:w-1/3">
+                <Link className="font-semibold text-cyan-700" href="#">Область 5</Link>
+                <Link href="#">Город 1</Link>
+                <Link href="#">Город 2</Link>
+                <Link href="#">Город 3</Link>
+                <Link href="#">Город 4</Link>
+                <Link href="#">Город 5</Link>
+                <Link href="#">Город 6</Link>
+              </div>
+              <div className="flex flex-col gap-3 w-full sm:w-2/4 sm:pl-2.5 lg:w-1/3">
+                <Link className="font-semibold text-cyan-700" href="#">Область 6</Link>
+                <Link href="#">Город 1</Link>
+                <Link href="#">Город 2</Link>
+              </div>
             </div>
           </div>
+        </div>
       </main>
     );
   }
