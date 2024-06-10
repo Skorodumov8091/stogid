@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "./headerHome";
 import Footer from "./footerHome";
 
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({  weight: '400', preload: false, });
 
 export const metadata: Metadata = {
   title: "СТОГИД",
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Header />
         {children}
         <Footer />
