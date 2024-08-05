@@ -1,5 +1,8 @@
+import StoGidButton from "@/components/forms/button";
+import StoGidInput from "@/components/forms/input";
+import StoGidTextarea from "@/components/forms/textarea";
+import StoGidUserAdreement from "@/components/forms/userAgreement";
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "СТОГИД - Добавить автосервис",
@@ -13,43 +16,19 @@ export default function Add() {
             <div className="h-min100-page w-full px-4 py-10 flex flex-col gap-4 gap-y-6">
               <h1 className="text-2xl font-semibold text-center">Добавить автосервис</h1>
               <form className="flex flex-col gap-2 gap-y-4 items-center">
-                <div className="w-full sm:w-2/3">
-                  <label htmlFor="stoName" className="block mb-2">Название</label>
-                  <input type="text" id="stoName" className="block w-full p-2.5 border border-gray-30 rounded-lg" placeholder="" name="name" />
-                </div>
-                <div className="w-full sm:w-2/3">
-                  <label htmlFor="stoDescription" className="block mb-2">Описание деятельности</label>
-                  <textarea id="stoDescription" className="block p-2.5 w-full rounded-lg border border-gray-30 min-h-32" placeholder="" name="description"></textarea>
-                </div>
-                <div className="w-full sm:w-2/3">
-                  <label htmlFor="stoAddress" className="block mb-2">Адрес</label>
-                  <input type="text" id="stoAddress" className="block w-full p-2.5 border border-gray-30 rounded-lg" placeholder="" name="address" />
-                </div>
-                <div className="w-full sm:w-2/3">
-                  <label htmlFor="stoPhone" className="block mb-2">Телефон</label>
-                  <input type="tel" id="stoPhone" className="block w-full p-2.5 border border-gray-30 rounded-lg" placeholder="" name="phone" />
-                </div>
-                <div className="w-full sm:w-2/3">
-                  <label htmlFor="stoSchedule" className="block mb-2">Режим работы</label>
-                  <input type="text" id="stoSchedule" className="block w-full p-2.5 border border-gray-30 rounded-lg" placeholder="" name="schedule" />
-                </div>
-                <div className="w-full sm:w-2/3">
-                  <label htmlFor="stoWebsite" className="block mb-2">Сайт</label>
-                  <input type="text" id="stoWebsite" className="block w-full p-2.5 border border-gray-30 rounded-lg" placeholder="" name="website" />
-                </div>
-                <div className="w-full sm:w-2/3">
-                  <label htmlFor="stoVK" className="block mb-2">Вконтакте</label>
-                  <input type="text" id="stoVK" className="block w-full p-2.5 border border-gray-30 rounded-lg" placeholder="" name="vk" />
-                </div>
-                <div className="w-full sm:w-2/3">
-                  <label htmlFor="stoEmail" className="block mb-2">Эл. почта организации</label>
-                  <input type="email" id="stoEmail" className="block w-full p-2.5 border border-gray-30 rounded-lg" placeholder="" name="email" />
-                </div>
-                <button type="submit" className="text-white bg-cyan-700 hover:bg-cyan-800 font-medium rounded-lg w-full sm:w-auto px-5 py-2.5 text-center">Добавить</button>
-                <p className="w-full sm:w-2/3 text-center text-xs">Нажимая кнопку "Добавить" вы даете согласие на обработку своих персональных данных в соответствии с <Link className="text-cyan-700" href="/policy">политикой обработки персональных данных</Link></p>
+                <StoGidInput id="stoName" type="text" name="stoName" label="Название" placeholder="Стогид" svg="name"/>
+                <StoGidInput id="stoAddress" type="text" name="stoAddress" label="Адрес" placeholder="ул. Великая д. 53" svg="address"/>
+                <StoGidInput id="stoPhone" type="tel" name="stoPhone" label="Телефон" placeholder="+7 (999) 999-99-99" svg="tel"/>
+                <StoGidInput id="stoEmail" type="email" name="stoEmail" label="Эл. почта организации" placeholder="email@company.ru" svg="email"/>
+                <StoGidInput id="stoSchedule" type="text" name="stoSchedule" label="Режим работы" placeholder="c 09.00 по 20.00" svg="time"/>
+                <StoGidInput id="stoWebsite" type="text" name="stoWebsite" label="Сайт" placeholder="http://sto.ru" svg="site"/>
+                <StoGidInput id="stoVK" type="text" name="stoVK" label="Вконтакте" placeholder="https://vk.com/sto" svg="vk"/>
+                <StoGidTextarea id="stoDescription" name="description" label="Описание деятельности" placeholder="Пару слов о Вашей деятельности" />
+                <StoGidButton text="Добавить" />
+                <StoGidUserAdreement buttonText="Добавить" />
               </form>
             </div>
-          </div>
+          </div>     
       </main>
     );
   }

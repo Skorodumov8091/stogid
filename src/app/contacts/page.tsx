@@ -1,5 +1,8 @@
+import StoGidButton from "@/components/forms/button";
+import StoGidInput from "@/components/forms/input";
+import StoGidTextarea from "@/components/forms/textarea";
+import StoGidUserAdreement from "@/components/forms/userAgreement";
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "СТОГИД - Контакты",
@@ -13,16 +16,10 @@ export default function Contacts() {
             <div className="h-min100-page w-full px-4 py-10 flex flex-col gap-4 gap-y-6">
               <h1 className="text-2xl font-semibold text-center">Контакты</h1>
               <form className="flex flex-col gap-2 gap-y-4 items-center">
-                <div className="w-full sm:w-2/3">
-                  <label htmlFor="contactMessage" className="block mb-2">Сообщение</label>
-                  <textarea id="contactMessage" className="block p-2.5 w-full rounded-lg border border-gray-30 min-h-32" placeholder="Сообщение..."></textarea>
-                </div>
-                <div className="w-full sm:w-2/3">
-                  <label htmlFor="contactEmail" className="block mb-2">Электронная почта</label>
-                  <input type="email" id="contactEmail" className="block w-full p-2.5 border border-gray-30 rounded-lg" placeholder="" required />
-                </div>
-                <button type="submit" className="text-white bg-cyan-700 hover:bg-cyan-800 font-medium rounded-lg w-full sm:w-auto px-5 py-2.5 text-center">Отправить</button>
-                <p className="w-full sm:w-2/3 text-center text-xs">Нажимая кнопку "Отправить" вы даете согласие на обработку своих персональных данных в соответствии с <Link className="text-cyan-700" href="/policy">политикой обработки персональных данных</Link></p>
+                <StoGidInput id="contactEmail" type="email" name="contactEmail" label="Электронная почта" placeholder="email@company.ru" svg="email" />
+                <StoGidTextarea id="contactDescription" name="contactDescription" label="Сообщение" placeholder="Оставьте здесь Ваше сообщение" />
+                <StoGidButton text="Отправить" />
+                <StoGidUserAdreement buttonText="Отправить" />
               </form>
             </div>
           </div>
